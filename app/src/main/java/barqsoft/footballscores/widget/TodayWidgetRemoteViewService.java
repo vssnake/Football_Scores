@@ -1,30 +1,23 @@
 package barqsoft.footballscores.widget;
 
 import android.annotation.TargetApi;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.Build;
-import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
-import java.lang.annotation.Target;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.ExecutionException;
 
 import barqsoft.footballscores.DatabaseContract;
-import barqsoft.footballscores.MainActivity;
 import barqsoft.footballscores.R;
 import barqsoft.footballscores.Utilies;
 import barqsoft.footballscores.scoresAdapter;
-import barqsoft.footballscores.service.MyFetchService;
 
 /**
  * Created by vssnake on 7/12/15.

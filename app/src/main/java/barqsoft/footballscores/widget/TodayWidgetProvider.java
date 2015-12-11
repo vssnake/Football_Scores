@@ -9,13 +9,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.NonNull;
-import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 import android.widget.RemoteViews;
 
 import barqsoft.footballscores.MainActivity;
 import barqsoft.footballscores.R;
-import barqsoft.footballscores.service.MyFetchService;
+import barqsoft.footballscores.service.FetchService;
 
 /**
  * Created by vssnake on 7/12/15.
@@ -54,7 +53,7 @@ public class TodayWidgetProvider extends AppWidgetProvider {
     public void onReceive(@NonNull Context context, @NonNull Intent intent) {
         super.onReceive(context, intent);
         Log.d(LOG_TAG, "onReceive");
-       if (MyFetchService.ACTION_DATA_UPDATED.equals(intent.getAction())) {
+       if (FetchService.ACTION_DATA_UPDATED.equals(intent.getAction())) {
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
            int appWidgetId = intent.getIntExtra(
                    AppWidgetManager.EXTRA_APPWIDGET_ID,
